@@ -1,73 +1,55 @@
-Here is an example README.md for a Rust project with some key sections and formatting:
+# Load Testing a Rust Web App with Locust
 
-# My Awesome Rust Project
+This project performs load testing on a simple Rust web application using Locust.
 
-This is an example Rust project to demonstrate a nicely formatted README.
+## About 
 
-## Overview
+The web app is a basic Rust program using Actix web. It has a few endpoints like:
 
-This project implements an awesome algorithm for doing something very important. It showcases some of the cool features of Rust like:
+- `/` - Home page  
+- `/users` - List users
+- `/login` - Login form
 
-- Blazing fast performance
-- Memory safety without garbage collection
-- Zero-cost abstractions
+Locust is used to simulate users and generate test loads on the app.
 
 ## Getting Started
 
-### Prerequisites
+### Dependencies
 
-You'll need to have Rust installed on your system. You can install it from [https://rustup.rs](https://rustup.rs).
+- Rust
+- Locust (`pip install locust`)
 
-### Installing
+### Running Locust
 
-Clone the project and build it with Cargo:
+Start the web app:
 
-```
-git clone https://github.com/username/rust-project.git
-cd rust-project
-cargo build
-```
+In another terminal, run Locust:
 
-### Running
 
-To run the program:
+This will start the Locust web interface on http://localhost:8089
 
-```
-cargo run --release
-```
+You can define users, spawn rate, test scenarios etc in the web UI or directly in `locustfile.py`.
 
-This will build in release mode and execute the binary.
+## Test Scenarios
 
-## Usage
+Some example test scenarios:
 
-The program allows you to do something very useful, like so:
+- Home page load  
+- View user profiles
+- Login with valid and invalid credentials
 
-```
-awesome-program input.txt output.txt
-```
+See `locustfile.py` for implementation details.
 
-This reads `input.txt`, performs the awesome algorithm, and writes the output to `output.txt`.
+## Results 
 
-## Roadmap
+Locust provides real-time graphs and stats for key metrics like requests/sec, response times, number of users etc.
 
-There are some exciting features planned for the future:
-
-- Support for parallel processing
-- A HTTP API 
-- Integration with databases
-
-See the [open issues](https://github.com/username/rust-project/issues) for a full list of proposed features.
+These can be used to analyze performance and set benchmarks.
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request.
-
-## Author
-
-Dewa Sahu - [Website](https://portfolio-beryl-seven-13.vercel.app/) / [GitHub](https://github.com/dewasahu2003)
+Please feel free to open issues and pull requests!
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
-
-Let me know if you would like me to explain or expand on any part of this example README!
+MIT

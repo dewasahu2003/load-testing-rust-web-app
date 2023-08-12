@@ -1,3 +1,6 @@
+install:
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
 rust-version:
 	@echo "Rust command-line utility versions:"
 	rustc --version 			#rust compiler
