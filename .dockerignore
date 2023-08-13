@@ -1,0 +1,10 @@
+.gitignore
+LICENSE
+*.md
+*.txt
+*.vscode
+*.github
+*.devcontainer
+*.py
+__pycache__
+Makefile
